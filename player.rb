@@ -7,20 +7,17 @@
 # Check player life
 # If player life is remaining switch to next player else if player life === 0 end game and declare other player as winner
 
-class Question
-# writes random math questions for the players
-def radomMath
-  def addition(a, b)
-    
-  end
-
-end
 
 class Player
   #responds to the math question given by class question
+  attr_reader :lives, :player_name
+  def initialize(name)
+    @lives = 3
+    @player_name = name
+  end
 
+  def remove_life
+    @lives -= 1
+  end
+  
 end
-
-class Game
-end
-
